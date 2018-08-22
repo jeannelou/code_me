@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SecondWindowController">
+   <children>
+      <GridPane layoutX="-4.0" layoutY="2.0" prefHeight="400.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="20.0" prefWidth="91.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="698.0" minWidth="10.0" prefWidth="509.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="202.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="198.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="65.0" prefWidth="403.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <AnchorPane prefHeight="151.0" prefWidth="98.0" style="-fx-background-color: #AED6F1;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="86.0">
+                     <image>
+                        <Image url="@../../img/call.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="177.0" prefWidth="200.0" style="-fx-background-color: #98C5E3;" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="contactImageView" fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="80.0" onMouseClicked="#showHomePage">
+                     <image>
+                        <Image url="@../../img/contacts.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowSpan="2">
+               <children>
+                  <Label layoutX="24.0" layoutY="126.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameField" layoutX="174.0" layoutY="120.0" prefHeight="35.0" prefWidth="303.0" />
+                  <Label layoutX="166.0" layoutY="14.0" text="Data Entry">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="199.0" text="Telephone">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="telephoneField" layoutX="174.0" layoutY="193.0" prefHeight="35.0" prefWidth="303.0" />
+                  <Label layoutX="26.0" layoutY="274.0" text="Email">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailField" layoutX="174.0" layoutY="268.0" prefHeight="35.0" prefWidth="303.0" />
+                  <HBox layoutX="108.0" layoutY="72.0" prefHeight="28.0" prefWidth="289.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="firstButton" layoutX="174.0" mnemonicParsing="false" onAction="#first" prefHeight="5.0" prefWidth="64.0" text="|&lt;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="previousButton" layoutX="184.0" layoutY="10.0" mnemonicParsing="false" onAction="#previous" prefHeight="5.0" prefWidth="64.0" text="&lt;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#next" prefHeight="5.0" prefWidth="64.0" text="&gt;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="lastButton" mnemonicParsing="false" onAction="#last" prefHeight="5.0" prefWidth="64.0" text="&gt;|">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="101.0" layoutY="351.0" prefHeight="28.0" prefWidth="303.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="addButton" layoutX="28.0" layoutY="34.0" mnemonicParsing="false" onAction="#add" prefHeight="30.0" prefWidth="90.0" text="Add">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteButton" layoutX="28.0" layoutY="34.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="90.0" text="Delete">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saveButton" layoutX="28.0" layoutY="34.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="90.0" text="Save">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="nameValidationMessage" layoutX="174.0" layoutY="155.0" prefHeight="18.0" prefWidth="303.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="telephoneValidationMessage" layoutX="174.0" layoutY="228.0" prefHeight="18.0" prefWidth="303.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailValidationMessage" layoutX="174.0" layoutY="303.0" prefHeight="18.0" prefWidth="303.0" text="*" textFill="RED">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
